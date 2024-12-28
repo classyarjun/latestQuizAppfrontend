@@ -1,0 +1,91 @@
+<!-- <div class="reset-password-container">
+  <h2>Reset Password</h2>
+  <form [formGroup]="resetPasswordForm" (ngSubmit)="onResetPassword()">
+
+    <div>
+      <label for="otp">OTP:</label>
+      <input
+        type="text"
+        id="otp"
+        formControlName="otp"
+        placeholder="Enter the OTP"
+      />
+      <div *ngIf="otp?.invalid && (otp?.touched || otp?.dirty)">
+        <small *ngIf="otp?.errors?.['required']">OTP is required.</small>
+      </div>
+    </div>
+
+
+    <div>
+      <label for="password">New Password:</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        placeholder="Enter new password"
+      />
+      <div *ngIf="password?.invalid && (password?.touched || password?.dirty)">
+        <small *ngIf="password?.errors?.['required']">Password is required.</small>
+        <small
+          *ngIf="password?.errors?.['minlength']"
+          >Password must be at least 6 characters.</small
+        >
+      </div>
+    </div>
+
+
+    <div>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        placeholder="Confirm your password"
+      />
+      <div
+        *ngIf="
+          confirmPassword?.invalid && (confirmPassword?.touched || confirmPassword?.dirty)
+        "
+      >
+        <small *ngIf="confirmPassword?.errors?.['required']">Confirmation is required.</small>
+        <small
+          *ngIf="resetPasswordForm.errors?.['passwordMismatch']"
+          >Passwords do not match.</small
+        >
+      </div>
+    </div>
+
+
+    <button type="submit" [disabled]="resetPasswordForm.invalid">
+      Reset Password
+    </button>
+  </form>
+
+
+  <div *ngIf="message" class="message">
+    {{ message }}
+  </div>
+</div> -->
+
+
+<form [formGroup]="resetPasswordForm" (ngSubmit)="onResetPassword()">
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email" required />
+  </div>
+  <div>
+    <label for="otp">OTP:</label>
+    <input id="otp" type="text" formControlName="otp" required />
+  </div>
+  <div>
+    <label for="password">New Password:</label>
+    <input id="password" type="text" formControlName="password" required />
+  </div>
+  <div>
+    <label for="confirmPassword">Confirm Password:</label>
+    <input id="confirmPassword" type="text" formControlName="confirmPassword" required />
+  </div>
+  <button type="submit" [disabled]="resetPasswordForm.invalid">Reset Password</button>
+</form>
+<p *ngIf="message">{{ message }}</p>
+

@@ -1,0 +1,79 @@
+/* Center the container on the screen */
+form {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style the form inputs */
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Style the button */
+form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:disabled {
+  background-color: #b3d7ff;
+  cursor: not-allowed;
+}
+
+form button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Message styling */
+p {
+  margin-top: 10px;
+  color: #007bff;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+
+  form button {
+    font-size: 14px;
+  }
+}
