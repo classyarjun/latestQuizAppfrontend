@@ -31,7 +31,7 @@ export class AdminloginComponent {
       (response) => {
         this.message ='Admin Login successfully..!';
         alert("Admin Login successfully..!");
-        this.router.navigate(['/admin-dashboard']); // Navigate to the dashboard or perform any action on successful login
+        this.router.navigate(['/adminssp=eJzj4tLP1TdILkqpqihQYDRgdGDw4kjLySzITiwqAQBm2Afs&q=flipkart&oq=filpcart&gs_lcrp=EgZjaHJvbWUqEggBEC4YChjHARixAxjRAxiABDIGCAAQRRg5MhIIARAuGAoYxwEYsQMY0QMYgAQyDwgCEAAYChiDARixAxiABDIMCAMQABgKGLEDGIAEMgwadmin-dashboardIBBAAGAoYsQMYgAQyDAgFEAAYChixAxiABDISCAYQABgKGIMBGLEDGIAEGIoFMgYIBxAFGEDSAQg0MTAzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8']); // Navigate to the dashboard or perform any action on successful login
       },
       (error) => {
         this.message = 'Invalid username or password. Please try again.';

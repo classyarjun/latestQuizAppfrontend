@@ -18,8 +18,8 @@
           <p>Loading questions...</p>
         </div>
 
-        <!-- Questions Section -->
-        <div *ngIf="!loading">
+        <!-- Questions Section last  -->
+        <!-- <div *ngIf="!loading">
           <div *ngFor="let question of questions; let i = index" class="mb-4 question">
             <pre>{{ i + 1 }}. {{ question.questionText }}</pre>
             <div *ngFor="let option of question.options" class="form-check">
@@ -37,8 +37,30 @@
               </label>
             </div>
           </div>
-        </div>
+        </div> -->
 
+
+<!--! Questions Section changed 28-12-2024-->
+
+<div *ngIf="!loading">
+  <div *ngFor="let question of questions; let i = index" class="mb-4 question">
+    <pre>{{ i + 1 }}. {{ question.questionText }}</pre>
+    <div *ngFor="let option of question.options" class="form-check">
+      <input
+        type="radio"
+        class="form-check-input"
+        [name]="'q' + question.id"
+        [value]="option"
+        id="{{ 'q' + question.id + option }}"
+        [(ngModel)]="userAnswers[question.id]"
+        (click)="onOptionClick(question.id, option)"
+        (keydown)="disableArrowNavigation($event)"/>
+      <label class="form-check-label" [for]="'q' + question.id + option">
+        {{ option }}
+      </label>
+    </div>
+  </div>
+</div>
         <!-- Submit Button -->
         <div class="text-center mt-4">
           <button

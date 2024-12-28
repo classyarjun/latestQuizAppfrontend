@@ -11,7 +11,7 @@
 
 .container {
   max-width: 400px;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -47,4 +47,28 @@ h2 {
   margin-top: 10px;
   font-size: 14px;
   color: green;
+}
+
+
+/* Button styling */
+.btn {
+  padding: 10px 15px; 
+  font-size: 16px;
+  background-color: #27c632ec;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.btn:disabled {
+  background-color: #28a745;;
+  cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+  background-color: #075714;
+  transform: scale(1.02);
 }

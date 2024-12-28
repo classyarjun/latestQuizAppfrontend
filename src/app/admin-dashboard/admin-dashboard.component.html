@@ -11,12 +11,12 @@
       <hr class="text-white" />
       <ul class="nav flex-column">
         <li class="nav-item mb-2">
-          <a class="nav-link bg-white text-black rounded py-2" routerLink="/admin-dashboard">
+          <a class="nav-link bg-white text-black rounded py-2" routerLink="/adminssp=eJzj4tLP1TdILkqpqihQYDRgdGDw4kjLySzITiwqAQBm2Afs&q=flipkart&oq=filpcart&gs_lcrp=EgZjaHJvbWUqEggBEC4YChjHARixAxjRAxiABDIGCAAQRRg5MhIIARAuGAoYxwEYsQMY0QMYgAQyDwgCEAAYChiDARixAxiABDIMCAMQABgKGLEDGIAEMgwadmin-dashboardIBBAAGAoYsQMYgAQyDAgFEAAYChixAxiABDISCAYQABgKGIMBGLEDGIAEGIoFMgYIBxAFGEDSAQg0MTAzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">
             <i class="fa fa-briefcase text-warning me-2"></i> Dashboard
           </a>
         </li>
         <li class="nav-item mb-2">
-          <a class="nav-link bg-white text-black rounded py-2" routerLink="/admin-all-users">
+          <a class="nav-link bg-white text-black rounded py-2" routerLink="/studentscoresp=eJzj4tLP1TdILkqpqihQYDRgdGDw4kjLySzITiwqAQBm2Afs&q=flipkart&oq=filpcart&gs_lcrp=EgZjaHJvbWUqEggBEC4YChjHARixAxjRAxiABDIGCAAQRRg5MhIIARAuGAoYxwEYsQMY0QMYgAQyDwgCEAAYChiDARixAxiABDIMCAMQABgKGLEDGIAEMgwadmin-dashboardIBBAAGAoYsQMYgAQyDAgFEAAYChixAxiABDISCAYQABgKGIMBGLEDGIAEGIoFMgYIBxAFGEDSAQg0MTAzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">
             <i class="fa fa-users text-warning me-2"></i> Student
           </a>
         </li>
@@ -41,7 +41,11 @@
       <div class="content p-3">
         <!-- Modal Trigger -->
         <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+
           <h5 class="text-primary">Available Questions</h5>
+          <div *ngFor="let question of questions; let i = index"></div>
+          <h5 class="text-primary">Total Questions: {{ questions.length }}</h5>
+
           <button class="btn btn-success mt-2 mt-md-0" data-bs-toggle="modal" data-bs-target="#CreateModal">
             + Add Question
           </button>

@@ -26,7 +26,7 @@
           <label for="name">Name</label>
           <input id="name" type="text" formControlName="name" class="form-control" />
           <div *ngIf="studentForm.get('name')?.invalid && studentForm.get('name')?.touched">
-            <span class="error-text">Name is required.</span>
+            <span class="error-text"> Enter valid name is required..!</span>
           </div>
         </div>
 
@@ -34,7 +34,7 @@
           <label for="email">Email</label>
           <input id="email" type="email" formControlName="emailId" class="form-control" />
           <div *ngIf="studentForm.get('emailId')?.invalid && studentForm.get('emailId')?.touched">
-            <span class="error-text">Valid email is required.</span>
+            <span class="error-text">Enter valid email is required..!</span>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@
           <label for="mobile">Mobile Number</label>
           <input id="mobile" type="text" formControlName="mono" class="form-control" />
           <div *ngIf="studentForm.get('mono')?.invalid && studentForm.get('mono')?.touched">
-            <span class="error-text">Mobile number must be 10 digits.</span>
+            <span class="error-text">Mobile number must be 10 digits..!</span>
           </div>
         </div>
 

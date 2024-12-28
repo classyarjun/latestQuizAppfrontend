@@ -23,8 +23,13 @@ const routes: Routes = [
   { path: 'test-readme', component:TestReadmeComponent },
   { path: 'quiz-test', component:QuizTestComponent },
   { path: 'testing', component:TestingComponent },
-  { path: 'admin-dashboard', component:AdminDashboardComponent},
-  { path: 'admin-all-users', component:AdminAllUsersComponent },
+  //?admindashboard
+  { path: 'adminssp=eJzj4tLP1TdILkqpqihQYDRgdGDw4kjLySzITiwqAQBm2Afs&q=flipkart&oq=filpcart&gs_lcrp=EgZjaHJvbWUqEggBEC4YChjHARixAxjRAxiABDIGCAAQRRg5MhIIARAuGAoYxwEYsQMY0QMYgAQyDwgCEAAYChiDARixAxiABDIMCAMQABgKGLEDGIAEMgwadmin-dashboardIBBAAGAoYsQMYgAQyDAgFEAAYChixAxiABDISCAYQABgKGIMBGLEDGIAEGIoFMgYIBxAFGEDSAQg0MTAzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8', component:AdminDashboardComponent},
+
+ //? All student
+  { path: 'studentscoresp=eJzj4tLP1TdILkqpqihQYDRgdGDw4kjLySzITiwqAQBm2Afs&q=flipkart&oq=filpcart&gs_lcrp=EgZjaHJvbWUqEggBEC4YChjHARixAxjRAxiABDIGCAAQRRg5MhIIARAuGAoYxwEYsQMY0QMYgAQyDwgCEAAYChiDARixAxiABDIMCAMQABgKGLEDGIAEMgwadmin-dashboardIBBAAGAoYsQMYgAQyDAgFEAAYChixAxiABDISCAYQABgKGIMBGLEDGIAEGIoFMgYIBxAFGEDSAQg0MTAzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8',
+    component:AdminAllUsersComponent },
+
   { path: 'contact-us', component:ContactUsComponent},
   { path: 'successpage', component:SuccesspageComponent},
 

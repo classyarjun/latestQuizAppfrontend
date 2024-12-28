@@ -72,7 +72,7 @@
 
 
 
-//?  ============== testing code
+//?  ============== testing code =================================================
 
 
 import { StudentServiceService } from './../../service/student-service.service';
@@ -96,7 +96,7 @@ export class RegisterComponent {
     private router: Router
   ) {
     this.studentForm = this.fb.group({
-      name: ['', Validators.required],
+      name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]+$/)]],
       emailId: ['', [Validators.required, Validators.email]],
       mono: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       graduateYears: ['', [Validators.required, Validators.min(1)]],

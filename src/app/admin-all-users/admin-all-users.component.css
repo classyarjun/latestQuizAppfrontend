@@ -18,8 +18,8 @@ body {
 .sidebar {
   background-color: #1f2937;
   color: #ffffff;
-  width: 250px;
-  min-height: 100vh;
+  width: 240px;
+  /* min-height: 100vh; */
   padding: 30px 20px;
   position: fixed;
   transition: all 0.3s ease-in-out;
@@ -40,7 +40,7 @@ body {
 }
 
 .sidebar .nav-item {
-  margin: 15px 0;
+  /* margin: 15px 0; */
 }
 
 .sidebar .nav-link {
