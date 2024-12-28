@@ -1,6 +1,25 @@
 /* General container styling */
+.parent {
+  background-image: url('https://images.pexels.com/photos/19679/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-title {
+  text-align: center;
+  color: #28a745;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
 .forgot-password-container {
-  max-width: 400px;
+  width: 400px;
+  max-width:410px;
   margin: 50px auto;
   padding: 20px;
   background-color: #f9f9f9;
@@ -10,12 +29,7 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Heading styling */
-.forgot-password-container h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-}
+
 
 /* Form element styling */
 form {
@@ -58,7 +72,7 @@ small {
 button {
   padding: 10px 15px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #16cd34;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -72,7 +86,7 @@ button:disabled {
 }
 
 button:hover:not(:disabled) {
-  background-color: #0056b3;
+  background-color: #16cd34;
 }
 
 /* Message styling */
@@ -80,5 +94,5 @@ button:hover:not(:disabled) {
   text-align: center;
   margin-top: 15px;
   font-size: 14px;
-  color: #2ecc71;
+  color: #eb4242;
 }

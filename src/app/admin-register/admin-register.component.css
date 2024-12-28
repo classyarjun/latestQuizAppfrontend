@@ -1,23 +1,38 @@
 /* General container styling */
+
+.parent {
+  background-image: url('https://images.pexels.com/photos/19679/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 .container {
   max-width: 500px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #fafafa;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   font-family: 'Arial', sans-serif;
+
 }
 
 /* Heading styling */
 .container h2 {
   text-align: center;
-  color: #333;
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
+  color: #28a745;
 }
+
 
 /* Form element styling */
 form {

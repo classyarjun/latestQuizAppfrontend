@@ -68,7 +68,15 @@
 </div> -->
 
 
+<div class="parent">
+
+
+
 <form [formGroup]="resetPasswordForm" (ngSubmit)="onResetPassword()">
+  <div class="form-titlts">
+    <h2 class="form-title">Reset Password</h2>
+    </div>
+
   <div>
     <label for="email">Email:</label>
     <input id="email" type="email" formControlName="email" required />
@@ -88,4 +96,6 @@
   <button type="submit" [disabled]="resetPasswordForm.invalid">Reset Password</button>
 </form>
 <p *ngIf="message">{{ message }}</p>
+
+</div>
 

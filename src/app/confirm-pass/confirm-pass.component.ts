@@ -214,7 +214,7 @@ export class ConfirmPassComponent {
     this.AdminService.getAdmin().subscribe(
       (data) => {
         this.admins = data;
-        console.log('Fetched Admin Data:', data);
+        // console.log('Fetched Admin Data:', data);
       },
       (error) => {
         this.errorMessage = 'Failed to fetch admin data';
@@ -264,6 +264,7 @@ export class ConfirmPassComponent {
     this.AdminService.resetPassword(email, otp, password, confirmPassword).subscribe(
       (response) => {
         this.message = `Password reset successfully for ${email}!`;
+        alert("Password reset successfully");
         this.router.navigate(['/adminlogin']);
       },
       (error) => {

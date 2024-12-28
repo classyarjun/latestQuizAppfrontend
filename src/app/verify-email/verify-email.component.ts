@@ -33,6 +33,7 @@ export class VerifyEmailComponent {
     this.AdminService.sendForgotPasswordOtp(userEmail).subscribe(
       (response) => {
         this.message = 'OTP has been sent to your email.';
+        alert('OTP has been sent to your email.');
          this.router.navigate(['/confirmpass']);
       },
       (error) => {
