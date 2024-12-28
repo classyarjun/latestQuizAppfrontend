@@ -155,4 +155,10 @@ export class RegisterComponent {
       (<any>element).msRequestFullscreen(); // For IE/Edge
     }
   }
+
+
+adminnevigate(){
+  this.router.navigate(['/adminlogin']);
+}
+
 }

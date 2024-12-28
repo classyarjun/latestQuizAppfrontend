@@ -1,3 +1,16 @@
+
+
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg shadow-lg p-3 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="../../assets/logo-openfuture/Image.jpeg.jpg" width="170" alt="logo" class="logo logo-display p-1">
+      </a>
+      <!-- <a class="nav-link fw-bold" aria-current="page">Admin Login</a> -->
+      <button class="btn btn-success" style="width: 120px;" (click)="adminnevigate()">Admin Login</button>
+    </div>
+  </nav>
+
 <div class="parent">
   <div class="container form-container">
     <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="form-card">
@@ -103,13 +116,13 @@
             <option value="Power BI">Power BI</option>
             <option value="Business Analyst">Business Analyst</option>
             <option value="Linux">Linux</option>
-           
+
           </select>
           <div *ngIf="studentForm.get('interestDomain')?.invalid && studentForm.get('interestDomain')?.touched">
             <span class="error-text">Interest Domain is required.</span>
           </div>
         </div>
-        
+
       </div>
 
       <!-- <button type="submit" class="btn btn-success" [disabled]="studentForm.invalid">Submit</button> -->
@@ -117,9 +130,8 @@
       <div class="button-container">
         <button type="submit" class="btn btn-success" [disabled]="studentForm.invalid">Submit</button>
       </div>
-      
+
     </form>
   </div>
 </div>
 
- 
