@@ -75,7 +75,7 @@ input:focus {
 .btn {
   padding: 10px 15px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #09ff00;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -84,12 +84,12 @@ input:focus {
 }
 
 .btn:disabled {
-  background-color: #ccc;
+  background-color: #1fd219c8;
   cursor: not-allowed;
 }
 
 .btn:hover:not(:disabled) {
-  background-color: #0056b3;
+  background-color: #09fe09f1;
   transform: scale(1.02);
 }
 
@@ -108,3 +108,32 @@ input:focus {
     transform: translateY(0);
   }
 }
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+
+.input-container {
+  position: relative;
+}
+
+.form-control {
+  width: 100%;
+  padding-right: 40px; /* Add some padding to make space for the icon */
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Position the icon on the right */
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+  font-size: 18px;
+}
+
+.toggle-icon:hover {
+  color: #007bff;
+}
+

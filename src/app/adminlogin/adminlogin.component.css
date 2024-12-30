@@ -52,7 +52,7 @@ h2 {
 
 /* Button styling */
 .btn {
-  padding: 10px 15px; 
+  padding: 10px 15px;
   font-size: 16px;
   background-color: #27c632ec;
   color: #fff;
@@ -72,3 +72,25 @@ h2 {
   background-color: #075714;
   transform: scale(1.02);
 }
+.input-container {
+  position: relative;
+}
+
+.input-container input {
+  padding-right: 30px; /* Add space for the icon */
+}
+
+.input-container .toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.input-container .toggle-icon:hover {
+  color: #000;
+}
+

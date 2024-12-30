@@ -1,27 +1,47 @@
-import { AdminService } from './../../service/admin.service';
+
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AdminService } from './../../service/admin.service';
 
 @Component({
   selector: 'app-admin-register',
   templateUrl: './admin-register.component.html',
   styleUrls: ['./admin-register.component.css']
 })
-
 export class AdminRegisterComponent {
   registerForm: FormGroup;
-  message: string = '';
+  showPassword: boolean = false;
+  showConfirmPassword: boolean = false;
 
-  constructor(private fb: FormBuilder, private AdminService: AdminService,private router: Router) {
-    this.registerForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      mobileNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
-      username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-    });
+  constructor(private fb: FormBuilder, private adminService: AdminService, private router: Router) {
+    this.registerForm = this.fb.group(
+      {
+        name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]+$/)]],
+        email: ['', [Validators.required, Validators.email]],
+        mobileNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+        username: ['', [Validators.required, Validators.pattern(/^[a-z]+$/)]],
+        password: ['', [Validators.required, Validators.minLength(6)]],
+        confirmPassword: ['', Validators.required]
+      },
+      { validator: this.passwordMatchValidator }
+    );
+  }
+
+  passwordMatchValidator(control: AbstractControl): void | null {
+    const password = control.get('password')?.value;
+    const confirmPassword = control.get('confirmPassword')?.value;
+    if (password !== confirmPassword) {
+      control.get('confirmPassword')?.setErrors({ mismatch: true });
+    }
+  }
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+
+  toggleConfirmPasswordVisibility() {
+    this.showConfirmPassword = !this.showConfirmPassword;
   }
 
   onRegister() {
@@ -29,24 +49,16 @@ export class AdminRegisterComponent {
       return;
     }
 
-    const { name, email, mobileNumber, username, password, confirmPassword } = this.registerForm.value;
+    const admin = this.registerForm.value;
 
-    if (password !== confirmPassword) {
-      this.message = 'Passwords do not match!';
-      return;
-    }
-
-    const admin = { name, email, mobileNumber, username, password, confirmPassword };
-    this.AdminService.registerAdmin(admin).subscribe(
+    this.adminService.registerAdmin(admin).subscribe(
       (response) => {
-
-        this.message = 'Admin registered successfully!';
+        alert('Admin registered successfully!');
         this.registerForm.reset();
-        alert("Admin registered successfully..!");
         this.router.navigate(['/adminlogin']);
       },
       (error) => {
-        this.message = 'Failed to register admin. Please try again.';
+        alert('Failed to register admin. Please try again.');
         console.error(error);
       }
     );
